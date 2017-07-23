@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="address=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Name</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<!-- style -->
+	<!-- build:css css/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet" href="bower_components/fancybox/dist/jquery.fancybox.min.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css css/main.css -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- endbuild -->
+</head>
+<body>
+	
+	<!-- header  -->
+	<section class="header">
+		<div class="container"></div>
+	</section>
+
+	<!-- footer -->
+	<section class="footer">
+		<div class="container"></div>
+	</section>
+
+	<!-- callback -->
+	<div id="callback" class="block-modal">
+		<div class="block-modal__inner">
+			<h5 class="block-modal__header">Перезвонить вам?</h5>
+			<span class="block-modal__appeal">Наш менеджер свяжется с Вами в течении 15 минут!</span>
+			<form action="#" class="modal-form">
+				<div class="form__wrapper-input">
+					<input type="text" name="name" class="modal-form__input input-name" placeholder="Ваше имя">
+				</div>
+				<div class="form__wrapper-input">
+					<input type="text" name="email" class="modal-form__input input-email" placeholder="Ваш e-mail">
+				</div>
+				<div class="form__wrapper-input">
+					<input type="text" name="phone" class="modal-form__input input-phone" placeholder="Ваш телефон">
+				</div>
+				<input type="hidden" name="num" class="input__hidden" value="Форма - ''">
+				<input type="submit" value="перезвоните мне" class="modal-form__submit">
+			</form>
+		</div>
+	</div>
+
+	<!-- thank -->
+	<div id="thank" class="block-modal modal-thank">
+		<div class="block-modal__inner">
+			<h5 class="block-modal__header">Спасибо за вашу заявку</h5>
+			<span class="block-modal__appeal">Наш менеджер свяжется с Вами в течении 15 минут!</span>
+		</div>
+	</div>
+	
+	<!-- scripts -->
+	<!-- build:js js/vendor.js defer -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+	<script src="bower_components/slick-carousel/slick/slick.js"></script>
+	<script src="bower_components/fancybox/dist/jquery.fancybox.min.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:js js/main.js defer -->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+
+</body>
+</html>

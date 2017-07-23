@@ -1,0 +1,21 @@
+%small-uppercase {
+	text-transform: uppercase;
+}
+
+@mixin fonts($size, $lineH, $weight) {
+	font: {
+		size: $size;
+		weight: $weight;
+		line-height: $lineH;
+	}
+}
+
+/*====================================
+            header
+====================================*/
+.header {}
+
+/*====================================
+            footer
+====================================*/
+.footer {}
