@@ -1,6 +1,6 @@
 {
   "name": "t-orange",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "normalize-css": "^7.0.0",
     "jquery.maskedinput": "^1.4.1",
