@@ -3,26 +3,15 @@ $(document).ready(function () {
 	// mask
 	$("input[name='phone']").mask("+7(999) 999-99-99");
 
-	// modal
-	$('.modalbox').fancybox({
-		wrapCSS  : 'modalbox-close'
-	});
+    // modal
+    $('.modalbox').fancybox({
+        animationEffect : "zoom-in-out",
+        slideClass : 'modal-close'
+    });
 
     // modal img
-    $(".fancybox").fancybox({
-        nextSpeed : 500,
-        prevSpeed : 500,
-        autoSize   : false,
-        autoHeight : false,
-        autoWidth  : false,
-        helpers : {
-            overlay : {
-                locked : true // try changing to true and scrolling around the page
-            },
-            title:{
-                type: 'over'
-            } 
-        }
+    $("[data-fancybox]").fancybox({
+        animationEffect : "zoom-in-out"
     });
 
 
@@ -84,10 +73,13 @@ $(document).ready(function () {
                 success: function(data) {
                     if(data == "true") {
 
-                        $.fancybox({ 
-                            href: "#thank"
+                        $.fancybox.open({ 
+                            src: "#thank"
                         });
-                        setTimeout("$.fancybox.close()", 5000);
+
+                        setTimeout(function() {
+                            $('.fancybox-close-small').click();
+                        }, 5000);
 
                         $('.input-name').val('');
                         $('.input-phone').val('');

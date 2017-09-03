@@ -14,7 +14,9 @@ let gulp = require('gulp'),
   livereload = require('gulp-livereload'),
   connect = require('gulp-connect'),
   plumber = require('gulp-plumber'),
-  tinypng = require('gulp-tinypng-extended');
+  tinypng = require('gulp-tinypng-extended'),
+  gutil = require('gulp-util'),
+  ftp = require('gulp-ftp');
 
 // bower
 gulp.task('bower', () => {
@@ -119,3 +121,15 @@ gulp.task('watch', () => {
 
 // default
 gulp.task('default', gulp.series('sass', gulp.parallel('watch', 'connect')));
+
+// ftp
+gulp.task('ftp', () => {
+    return gulp.src('dist/**/*')
+        .pipe(ftp({
+            host: '',
+            user: '',
+            pass: '',
+            remotePath: ''
+        }))
+        .pipe(gutil.noop());
+});
