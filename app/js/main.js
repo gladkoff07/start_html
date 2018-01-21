@@ -73,13 +73,13 @@ $(document).ready(function () {
                 success: function(data) {
                     if(data == "true") {
 
+                        $.fancybox.close();
+
                         $.fancybox.open({ 
                             src: "#thank"
                         });
 
-                        setTimeout(function() {
-                            $('.fancybox-close-small').click();
-                        }, 5000);
+                        setTimeout("$.fancybox.close()", 5000);
 
                         $('.input-name').val('');
                         $('.input-phone').val('');

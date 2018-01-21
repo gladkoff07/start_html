@@ -93,7 +93,7 @@ section{
 	margin-right: auto;
 }
 
-::-webkit-input-placeholder{color: #000;font-size: 17px;}
-:-moz-placeholder{color: #000;font-size: 17px;}
-::-moz-placeholder{color: #000;font-size: 17px;}
-:-ms-input-placeholder{color: #000;font-size: 17px;}
+::-webkit-input-placeholder{color: #000; font-size: $fontSize;}
+:-moz-placeholder{color: #000; font-size: $fontSize;}
+::-moz-placeholder{color: #000; font-size: $fontSize;}
+:-ms-input-placeholder{color: #000; font-size: $fontSize;}
