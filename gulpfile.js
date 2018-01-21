@@ -16,7 +16,8 @@ let gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   tinypng = require('gulp-tinypng-extended'),
   gutil = require('gulp-util'),
-  ftp = require('gulp-ftp');
+  ftp = require('gulp-ftp'),
+  sourcemaps = require('gulp-sourcemaps');
 
 // bower
 gulp.task('bower', () => {
@@ -68,7 +69,9 @@ gulp.task('sprite', () => {
 // sass
 gulp.task('sass', () => {
   return gulp.src('app/scss/**/*.scss')
-    .pipe(gulpSass.sync().on('error', gulpSass.logError))
+    .pipe(sourcemaps.init())
+      .pipe(gulpSass.sync().on('error', gulpSass.logError))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/css'))
     .pipe(connect.reload());
 });

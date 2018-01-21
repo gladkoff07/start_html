@@ -1,6 +1,6 @@
 {
   "name": "start_html",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3",
     "gulp-tinypng-extended": "^1.5.0",
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.1.2",

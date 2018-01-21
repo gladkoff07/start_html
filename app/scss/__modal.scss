@@ -9,12 +9,23 @@ input.error:focus, textarea.error:focus { border-color: #973d3d; background: #ff
 	display: none;
 	text-align: center;
 
-	&__inner {}
-
 		&__header {}
 		
 		&__appeal {}
+
+	&_thank {}
 }
+
+.modal-form {
+
+	&__input {}
+
+	&__submit {
+
+		&:hover {}
+	}
+}
+
 /*====================================
             fancy
 ====================================*/

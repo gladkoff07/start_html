@@ -1,10 +1,10 @@
 <?php
 
 // adress email where
-$sendto = "info@flowersbig.ru";
+$sendto = "info@site.ru";
 
 // adress email from
-$usermail = "info@large_flowers.ru";
+$usermail = "info@site.ru";
 
 
 $name  =  $_POST['name'];
