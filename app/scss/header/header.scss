@@ -1,4 +1,6 @@
 
+@import '../__settings';
+
 .header {
 
   @include respond($largeDesktop) {}

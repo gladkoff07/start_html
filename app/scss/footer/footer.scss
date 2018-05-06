@@ -1,4 +1,6 @@
 
+@import '../__settings';
+
 .footer {
 
   @include respond($largeDesktop) {}

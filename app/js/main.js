@@ -42,12 +42,12 @@ $(document).ready(function () {
   $('.form').submit(function() { return false; });
   $('.submit-js').on('click', function() {
 
-    let name = $(this).closest('.form').find('.input-name-js').val();
-    let phone = $(this).closest('.form').find('.input-phone-js').val();
-    let email = $(this).closest('.form').find('.input-email-js').val();
-    let nameVal = name.length;
-    let phoneVal = phone.length;
-    let emailVal = email.length;
+    var name = $(this).closest('.form').find('.input-name-js').val();
+    var phone = $(this).closest('.form').find('.input-phone-js').val();
+    var email = $(this).closest('.form').find('.input-email-js').val();
+    var nameVal = name.length;
+    var phoneVal = phone.length;
+    var emailVal = email.length;
 
     if(phoneVal < 10) {
       $(this).closest('.form').find('.input-phone').addClass("error");
