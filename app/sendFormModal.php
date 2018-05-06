@@ -29,9 +29,9 @@ $msg .= "</body></html>";
 
 // отправка сообщения
 if(@mail($sendto, $subject, $msg, $headers)) {
-	echo "true";
+  echo "true";
 } else {
-	echo "false";
+  echo "false";
 }
 
 ?>
