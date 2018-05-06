@@ -31,19 +31,19 @@ gulp.task('bower', () => {
 // clean
 gulp.task('clean', () => {
     return gulp.src('dist/', {read: false})
-        .pipe(gulpClean());
+      .pipe(gulpClean());
 });
 
 // img optim
 gulp.task('tinypng', () => {
     gulp.src('app/sources/img/**/*.{png,jpg,jpeg}')
-        .pipe(plumber())
-        .pipe(tinypng({
-            key: 'API_KEY',
-            sigFile: 'app/sources/img/.tinypng-sigs',
-            log: true
-        }))
-        .pipe(gulp.dest('app/img'));
+      .pipe(plumber())
+      .pipe(tinypng({
+          key: 'API_KEY',
+          sigFile: 'app/sources/img/.tinypng-sigs',
+          log: true
+      }))
+      .pipe(gulp.dest('app/img'));
 });
 
 // server
@@ -79,25 +79,25 @@ gulp.task('sass', () => {
 // html
 gulp.task('html', () => {
  return gulp.src('app/*.html')
-     .pipe(connect.reload());
+    .pipe(connect.reload());
 });
 
 // add img
 gulp.task('img', () => {
  return gulp.src('app/img/**/*')
-     .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('dist/img'))
 });
 
 // add font
 gulp.task('font', () => {
  return gulp.src('app/font/**/*')
-     .pipe(gulp.dest('dist/font'))
+    .pipe(gulp.dest('dist/font'))
 });
 
 // add php
 gulp.task('php', () => {
  return gulp.src('app/*.php')
-     .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('dist/'))
 });
 
 // Comprese 
@@ -128,11 +128,11 @@ gulp.task('default', gulp.series('sass', gulp.parallel('watch', 'connect')));
 // ftp
 gulp.task('ftp', () => {
     return gulp.src('dist/**/*')
-        .pipe(ftp({
-            host: '',
-            user: '',
-            pass: '',
-            remotePath: ''
-        }))
-        .pipe(gutil.noop());
+      .pipe(ftp({
+          host: '',
+          user: '',
+          pass: '',
+          remotePath: ''
+      }))
+      .pipe(gutil.noop());
 });

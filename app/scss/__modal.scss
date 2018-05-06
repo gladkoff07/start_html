@@ -5,7 +5,7 @@
 input.error, textarea.error { border-color: #973d3d; background: #f0bebe; color: #272727; }
 input.error:focus, textarea.error:focus { border-color: #973d3d; background: #fff; color: #272727; }
 
-.block-modal {
+.modal {
 	display: none;
 	text-align: center;
 
@@ -16,20 +16,10 @@ input.error:focus, textarea.error:focus { border-color: #973d3d; background: #ff
 	&_thank {}
 }
 
-.modal-form {
-
-	&__input {}
-
-	&__submit {
-
-		&:hover {}
-	}
-}
-
 /*====================================
             fancy
 ====================================*/
-.block-modal .fancybox-close-small {
+.modal .fancybox-close-small {
 
 	&:hover {}
 }

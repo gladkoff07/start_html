@@ -1,0 +1,46 @@
+
+/*====================================
+            variables
+====================================*/
+$fontSize: 18px;
+$colorWhite: #fff;
+$colorBlack: #000;
+
+/*====================================
+            mixins
+====================================*/
+$phone : '(max-width: 540px)';
+$tabletPortrait: '(max-width: 767px)';
+$tabletLandscape: '(max-width: 979px)';
+$largeDesktop: '(max-width: 1169px)';
+
+@mixin respond($media) {
+  @media only screen and #{$media} {
+      @content;
+  }
+}
+
+@mixin fontFamily($size, $family) {
+	font-family: $family;
+	font-size: $size;
+}
+
+@mixin content($left, $top) {
+	content: '';
+	display: block;
+	position: absolute;
+	left: $left;
+	top: $top;
+}
+
+@mixin alignJustify($justify) {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: $justify;
+}
+
+@mixin blockAuto($marginTop) {
+	margin-top: $marginTop;
+	margin-left: auto;
+	margin-right: auto;
+}

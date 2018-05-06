@@ -1,0 +1,8 @@
+
+.footer {
+
+  @include respond($largeDesktop) {}
+	@include respond($tabletLandscape) {}
+	@include respond($tabletPortrait) {}
+	@include respond($phone) {}
+}
