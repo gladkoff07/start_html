@@ -27,10 +27,7 @@ body{
   margin-right: auto;
 
   @include respond($largeDesktop) {
-
-    .container{
-      width: 100%;
-    }
+    width: 100%;
   }
 }
 
@@ -110,10 +107,7 @@ section{
   background-repeat: no-repeat;
 
   @include respond($largeDesktop) {
-
-    section{
-      min-width: 100%;
-    }
+    min-width: 100%;
   }
 }
 
