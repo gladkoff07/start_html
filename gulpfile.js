@@ -117,7 +117,7 @@ gulp.task('minify', () => {
 gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'img', 'font', 'minify', 'php')));
 
 gulp.task('watch', () => {
-  gulp.watch('app/scss/*.scss', gulp.series('sass'));
+  gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
    gulp.watch('app/*.html', gulp.series('html'));
   gulp.watch('bower.json', gulp.series('bower'));
 });
