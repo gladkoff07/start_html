@@ -17,7 +17,8 @@ let gulp = require('gulp'),
   tinypng = require('gulp-tinypng-extended'),
   gutil = require('gulp-util'),
   ftp = require('gulp-ftp'),
-  sourcemaps = require('gulp-sourcemaps');
+  sourcemaps = require('gulp-sourcemaps'),
+  svgSprite = require("gulp-svg-sprites");
 
 // bower
 gulp.task('bower', () => {
@@ -64,6 +65,15 @@ gulp.task('sprite', () => {
   let imgStream = spriteData.img.pipe(gulp.dest('app/img')),
     cssStream = spriteData.css.pipe(gulp.dest('app/scss'));
   return merge(imgStream, cssStream);
+});
+
+// sprites svg
+gulp.task('sprite_svg', function () {
+  return gulp.src('app/sources/svg/*.svg')
+      .pipe(svgSprite({
+        mode: 'symbols'
+      }))
+      .pipe(gulp.dest("app"));
 });
 
 // sass
@@ -114,7 +124,7 @@ gulp.task('minify', () => {
 });
 
 // build
-gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'img', 'font', 'minify', 'php')));
+gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'img', 'font', 'minify')));
 
 gulp.task('watch', () => {
   gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
